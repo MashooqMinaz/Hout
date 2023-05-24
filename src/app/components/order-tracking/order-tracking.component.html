@@ -3,19 +3,65 @@
     header
   </div>
 
-  <div class="mt-20 h-[1000px] container w-1/2 mx-auto bg-red-200">
-    <div class="h-[896px] w-full bg-blue-300 flex gap-4">
-      <div class="w-1/5 h-full bg-slate-500">
+  <div class="mt-20 h-[1000px] container w-1/2 mx-auto">
+    <div class="h-[896px] w-full flex gap-4">
+      <div class="w-1/5 h-full bg-[#F8F8F8] overflow-hidden">
+        <div class="w-3/5 h-full flex flex-col items-center justify-center">
+
+          <!-- ordered -->
+          <div class="relative">
+            <div class="w-8 h-8 bg-custom-light-gray rounded-full">
+              <svg [ngClass]="ordered ? 'block' : 'hidden'" class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+                </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
+              </svg>
+            </div>
+            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-[#0E7763] font-Open-Sans">
+              <p [ngClass]="ordered ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Ordered</p>
+              <p [ngClass]="ordered ? 'block' : 'hidden'">Mon, january 24</p>
+            </div>
+          </div>
+
+          <!-- shipped -->
+          <div [ngClass]="shipped ? 'bg-custom-green' : 'bg-custom-light-gray'" class="h-1/4 w-1 bg-custom-green mt-1"></div>
+          <div class="w-8 h-8 bg-[#D9D9D9] rounded-full mt-1 relative">
+            <svg [ngClass]="shipped ? 'block' : 'hidden' " class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+              </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
+            </svg>
+
+            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-[#0E7763] font-Open-Sans">
+              <p [ngClass]="shipped ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Shipped</p>
+              <p [ngClass]="shipped ? 'block' : 'hidden'">Thu, january 27</p>
+            </div>
+          </div>
+
+
+          <!-- delivered -->
+          <div  [ngClass]="delivered ? 'bg-custom-green' : 'bg-custom-light-gray'" class="h-1/4 w-1  bg-custom-green mt-1"></div>
+          <div class="w-8 h-8 bg-[#D9D9D9] rounded-full mt-1 relative">
+            <svg [ngClass]="delivered ? 'block' : 'hidden' " class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+              </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
+            </svg>
+
+            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-custom-green-text font-Open-Sans">
+              <p [ngClass]="delivered ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Delivered</p>
+              <p [ngClass]="delivered ? 'block' : 'hidden'">Sat, january 29</p>
+            </div>
+          </div>
+
+        </div>
+
 
       </div>
-      <div class="h-full w-4/5 relative">
-        <img src="../../../assets/images/shoplist3-600x811.jpg.png" class="absolute w-full h-full object-cover" alt="cannot load preview">
+      <div class="h-full w-4/5 relative overflow-hidden bg-[#F8F8F8] ">
+        <img src="../../../assets/images/checkoutchair.jpg" class="absolute w-full h-full object-cover" alt="cannot load preview">
       </div>
     </div>
-    <div class="h-[400px] w-full bg-orange-200 mt-4">
+
+    <div class="h-[400px] w-full bg-[#F8F8F8] mt-4 p-11">
 
     </div>
 
   </div>
+
 </section>
 

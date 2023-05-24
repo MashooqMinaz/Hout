@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class OrderTrackingComponent {
 
+  ordered:boolean = true
+  shipped:boolean = true
+  delivered:boolean = false
+
 }
