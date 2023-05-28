@@ -9,6 +9,7 @@ module.exports = {
         'Open-Sans': ['Open Sans', 'sans-serif']
       },
       colors:{
+        'custom-secondary-color': '#FFB23F',
         'custom-gray-text': '#8B8B8B',
         'custom-black-text': '#1D1D1D',
         'custom-green-text': '#0E7763',

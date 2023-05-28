@@ -2,49 +2,57 @@
   <div class="h-[614px] w-full bg-[#FFF0DA] font-EB-Garamond text-custom-gray-text">
     header
   </div>
+  <p class="hidden sm:block">Sm</p>
+  <p class="hidden md:block">Md</p>
 
-  <div class="mt-20 h-[1000px] container w-1/2 mx-auto">
-    <div class="h-[896px] w-full flex gap-4">
-      <div class="w-1/5 h-full bg-[#F8F8F8] overflow-hidden">
-        <div class="w-3/5 h-full flex flex-col items-center justify-center">
+  <div class="mt-14 sm:mt-16 md:mt-18 lg:mt-20 h-full w-4/5 lg:w-2/3 mx-auto">
+    <div class="h-[480px] sm:h-[680px] md:h-[860px] lg:h-[920px]  w-full flex flex-col lg:flex-row  gap-4">
+      <div class="w-full lg:w-1/5 h-2/5 lg:h-full bg-[#F8F8F8] overflow-hidden">
+        <div class="lg:w-3/5 w-full h-2/3 sm:h-3/4 lg:h-full flex lg:flex-col items-center justify-center">
 
           <!-- ordered -->
           <div class="relative">
-            <div class="w-8 h-8 bg-custom-light-gray rounded-full">
-              <svg [ngClass]="ordered ? 'block' : 'hidden'" class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+            <div class="w-6 h-6 md:w-8 md:h-8 bg-custom-light-gray rounded-full">
+              <svg [ngClass]="ordered ? 'block' : 'hidden'" class="w-6 h-6 md:w-8 md:h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
                 </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
               </svg>
             </div>
-            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-[#0E7763] font-Open-Sans">
+            <div class="absolute -right-12 lg:left-4  top-7 sm:top-8 md:top-10 lg:top-[6px] w-28 md:w-32 lg:w-40 h-fit text-xs sm:text-sm md:text-base flex flex-col items-center text-[#0E7763] font-Open-Sans">
               <p [ngClass]="ordered ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Ordered</p>
-              <p [ngClass]="ordered ? 'block' : 'hidden'">Mon, january 24</p>
+              <div [ngClass]="ordered ? 'block' : 'hidden'" class="flex lg:gap-1 lg:flex-row flex-col items-center">
+                <p>Mon </p><p> september 24</p>
+              </div>
             </div>
           </div>
 
           <!-- shipped -->
-          <div [ngClass]="shipped ? 'bg-custom-green' : 'bg-custom-light-gray'" class="h-1/4 w-1 bg-custom-green mt-1"></div>
-          <div class="w-8 h-8 bg-[#D9D9D9] rounded-full mt-1 relative">
-            <svg [ngClass]="shipped ? 'block' : 'hidden' " class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+          <div [ngClass]="shipped ? 'bg-custom-green' : 'bg-custom-light-gray'" class="w-1/4 h-1 lg:h-1/4 lg:w-1 bg-custom-green ml-[3px] md:ml-1 lg:mt-1"></div>
+          <div class="w-6 h-6 md:w-8 md:h-8 bg-[#D9D9D9] rounded-full ml-[3px] md:ml-1 lg:mt-1 relative">
+            <svg [ngClass]="shipped ? 'block' : 'hidden' " class="w-6 h-6 md:w-8 md:h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
               </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
             </svg>
 
-            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-[#0E7763] font-Open-Sans">
+            <div class="absolute -right-12 lg:left-4  top-7 sm:top-8 md:top-10 lg:top-[6px] w-28 md:w-32 lg:w-40 h-fit text-xs sm:text-sm md:text-base  flex flex-col items-center text-[#0E7763] font-Open-Sans">
               <p [ngClass]="shipped ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Shipped</p>
-              <p [ngClass]="shipped ? 'block' : 'hidden'">Thu, january 27</p>
+              <div [ngClass]="shipped ? 'block' : 'hidden'" class="flex lg:gap-1 lg:flex-row flex-col items-center">
+                <p >Thu</p><p>january 27</p>
+              </div>
             </div>
           </div>
 
 
           <!-- delivered -->
-          <div  [ngClass]="delivered ? 'bg-custom-green' : 'bg-custom-light-gray'" class="h-1/4 w-1  bg-custom-green mt-1"></div>
-          <div class="w-8 h-8 bg-[#D9D9D9] rounded-full mt-1 relative">
-            <svg [ngClass]="delivered ? 'block' : 'hidden' " class="w-8 h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
+          <div  [ngClass]="delivered ? 'bg-custom-green' : 'bg-custom-light-gray'" class="w-1/4 h-1 lg:h-1/4 lg:w-1  bg-custom-green ml-[3px] md:ml-1 lg:mt-1"></div>
+          <div class="w-6 h-6 md:w-8 md:h-8 bg-[#D9D9D9] rounded-full ml-[3px] md:ml-1 lg:mt-1 relative">
+            <svg [ngClass]="delivered ? 'block' : 'hidden' " class="w-6 h-6 md:w-8 md:h-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g><g><g><g><circle style="fill:#16A085;" cx="148.5" cy="148.5" r="148.5"/>
               </g></g></g><path style="fill:#0E7763;" d="M224.696,106.696l-115.409,108.29l77.124,77.124c54.847-14.44,97.277-59.463,107.966-115.733L224.696,106.696z"/><g><polygon style="fill:#ECF0F1;" points="121,226.698 64.15,169.85 93.85,140.15 121,167.302 203.15,85.15 232.85,114.85"/></g></g>
             </svg>
 
-            <div class="absolute left-4 top-[6px] w-40 h-12 flex flex-col items-center text-custom-green-text font-Open-Sans">
+            <div class="absolute -right-12 lg:left-4  top-7 sm:top-8 md:top-10 lg:top-[6px] w-28 md:w-32 lg:w-40 h-fit text-xs sm:text-sm md:text-base flex flex-col items-center text-custom-green-text font-Open-Sans">
               <p [ngClass]="delivered ? 'text-custom-green-text' : 'text-custom-light-gray'" class="font-semibold">Delivered</p>
-              <p [ngClass]="delivered ? 'block' : 'hidden'">Sat, january 29</p>
+              <div [ngClass]="delivered ? 'block' : 'hidden'" class="flex lg:gap-1 lg:flex-row flex-col items-center">
+                <p>Sat</p><p>january 29</p>
+              </div>
             </div>
           </div>
 
@@ -52,16 +60,54 @@
 
 
       </div>
-      <div class="h-full w-4/5 relative overflow-hidden bg-[#F8F8F8] ">
+      <div class="order-first lg:order-last h-full w-full lg:w-4/5 relative overflow-hidden bg-[#F8F8F8] ">
         <img src="../../../assets/images/checkoutchair.jpg" class="absolute w-full h-full object-cover" alt="cannot load preview">
       </div>
     </div>
 
-    <div class="h-[400px] w-full bg-[#F8F8F8] mt-4 p-11">
+    <div class="w-full bg-[#F8F8F8] mt-4 p-11 pl-16 flex gap-8 text-custom-black-text">
+
+      <div class="w-1/2 h-full">
+        <p class="font-semibold font-Josefin-Sans text-sm tracking-[2.6px] text-custom-black-text">BED TABLE</p>
+        <p class="mt-1 font-EB-Garamond italic">$36.00</p>
+        <div class="mt-2 font-Open-Sans ">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim fugit alias laboriosam totam quasi quae nostrum. Aut ea temporibus architecto placeat accusantium, ipsa aperiam molestias, fuga amet quod nulla natus.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tempore officia quaerat sit sunt corrupti aperiam perferendis, quas totam! Vero nisi ullam quibusdam perferendis. Nisi minus facere enim sapiente repellendus.
+          Lorem ipsum dolor sit amet
+        </div>
+
+        <div class="mt-6 flex gap-1 p-2 hover:ring-1 ring-custom-secondary-color w-fit cursor-pointer">
+          <div class="h-6 w-6 rounded-full bg-custom-secondary-color flex items-center justify-center">
+            <span class="text-white">★</span>
+          </div>
+          <p class="font-Open-Sans font-semibold text-custom-secondary-color">Rate & Review Product</p>
+        </div>
+      </div>
+
+      <div class="w-1/2 h-full pl-16">
+        <p class="font-semibold font-Josefin-Sans text-sm tracking-[2.6px] text-custom-black-text">DELIVERY ADDRESS</p>
+        <p class="mt-1 font-EB-Garamond italic font-medium text-lg ">Jithu Aroshi</p>
+        <p class="mt-2 font-Open-Sans max-w-[70%] ">
+          Trends update yourself 3rd floor, Gokulam galleria mall, opposite federal tower, Arayidathupalam, Kozhikode,
+          Kerala - 673089 ARAYISDSDSDSS, GOKULAM MALL
+          Kozhikode - 673004, Kerala
+        </p>
+        <p class="mt-2 font-EB-Garamond italic font-medium text-lg ">Phone Number</p>
+        <p class="mt-1 font-Open-Sans max-h-[40%] max-w-[80%] overflow-y-auto">970000006, 8123415630</p>
+
+        <p class="mt-6 font-Open-Sans max-h-[40%] max-w-[80%] overflow-y-auto">This order is also tracked by 9746795686</p>
+        <button class="mt-1 py-4 h-fit px-12 border-[1px] text-custom-black-text border-[#8B8B8B] font-EB-Garamond italic font-extrabold text-lg">Download Invoice</button>
+
+      </div>
 
     </div>
 
+    <footer class="mt-24">
+      <p class="text-center">Footer</p>
+    </footer>
+
   </div>
+
 
 </section>
 
