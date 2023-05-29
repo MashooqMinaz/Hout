@@ -11,4 +11,5 @@ export class OrderTrackingComponent {
   shipped:boolean = true
   delivered:boolean = false
 
+  price="$36.00"
 }
