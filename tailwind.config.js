@@ -6,7 +6,8 @@ module.exports = {
       fontFamily:{
         'EB-Garamond': ['EB Garamond', 'serif'],
         'Josefin-Sans': ['Josefin Sans', 'sans-serif'],
-        'Open-Sans': ['Open Sans', 'sans-serif']
+        'Open-Sans': ['Open Sans', 'sans-serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
       },
       colors:{
         'custom-secondary-color': '#FFB23F',
