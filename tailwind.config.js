@@ -16,6 +16,11 @@ module.exports = {
         'custom-green-text': '#0E7763',
         'custom-green': '#16A085',
         'custom-light-gray': '#D9D9D9',
+        'primary-color': '#FFF',
+        'secondary-color': '#9DB97B',
+        'pic-background-color': 'rgb(247,248,250)',
+        'h4-text-color': '#CAC8CE',
+        'h1-text-color': '#79848a'
       }
     },
   },

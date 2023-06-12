@@ -1,0 +1,259 @@
+<header class="p-2 pr-3 lg:h-max flex flex-col justify-between items-center lg:py-2 lg:px-6 relative z-50">
+
+  <div [class.home]="homeshow" [class.homebk]="!homeshow" class=" w-full bg-white absolute left-0 top-20 px-5 duration-500 ease-linear overflow-hidden" >
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">HOME</h1>
+      <button (click)="homefn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+            {{homearrow}}
+          </span>
+      </button>
+      </div>
+
+      <div [class.homemenu]="home" [class.homemenubk]="!home" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Main Page</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Store</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cart</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Out Team</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">About Us</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">PAGES</h1>
+      <button (click)="pagefn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+            {{pagesarrow}}
+          </span>
+      </button>
+      </div>
+
+      <div [class.homemenu]="pages" [class.homemenubk]="!pages" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Checkout</p>
+        <a class="p-2 pl-3 tracking-wide text-h1-text-color" >Profile</a>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color" >Order Tracking</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Wishlist</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">FAQs</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">SHOP</h1>
+      <button (click)="shopfn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+            {{shoparrow}}
+          </span>
+      </button>
+      </div>
+
+      <div [class.homemenu2]="shop" [class.homemenubk2]="!shop" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Chair</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Sofa</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Table</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cabinet</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Tv Stand</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Bed</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Decorators</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">STORE</h1>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col">
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <button class="text-xs font-semibold tracking-widest">ABOUT US</button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="hidden h-5 w-[60%] lg:flex justify-between border-b-[1px] mb-3">
+<h1 class="text-h1-text-color/70 font-thin text-xs">Free Shipping for order over$50!</h1>
+<span class="flex gap-3 text-h1-text-color/70 font-thin text-xs">
+  <h1>FAQ</h1>
+  <h1>Contact</h1>
+</span>
+  </div>
+
+ <div class="flex justify-between items-center w-full lg:w-[60%] py-2 lg:py-1 ">
+  <span class="hidden lg:flex justify-center items-center w-52 ">
+    <span class="material-symbols-outlined text-lg text-black/80">
+      search
+      </span>
+    <input class="w-full h-5 ml-1 px-1 outline-none bg-transparent text-xs text-black/80 placeholder-black/80 border-b-[1px] border-h4-text-color text-end" type="text" placeholder="SEARCH">
+  </span>
+
+  <div class="h-14 w-36 lg:w-52 ">
+  <img class="h-full w-full object-contain" src="../../../assets/images/logo/Icon.png" alt="">
+  </div>
+
+  <div class="flex items-center justify-end gap-4 w-52 ">
+    <button class="hidden lg:block">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+        person
+      </span>
+    </button>
+    <button class="hidden lg:flex items-center gap-1">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+        favorite
+      </span>
+      <h1 class="text-black/80 text-xs  ">0</h1>
+    </button>
+    <button class="flex items-center gap-1">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+        shopping_bag
+      </span>
+      <h1 class="text-black/80 text-xs  ">0</h1>
+    </button>
+    <button class="lg:hidden flex justify-center items-center">
+      <span (click)="homeshowfn()" class="material-symbols-outlined text-black/80">
+        menu
+      </span>
+    </button>
+  </div>
+ </div>
+
+ <div class="lg:flex gap-12 mt-5 mb-2 hidden h-4">
+  <button class="relative group">
+    <H1 class="tracking-widest text-xs font-medium text-black/80 hover:border-b-[0.5px] border-black h-[14px]" routerLink="/">HOME</H1>
+
+    <div class="group-hover:h-[250px] group-hover:pt-6 h-0 bg-white w-60 overflow-hidden absolute top-4 -left-[100px] duration-500 ">
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Main Page</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Store</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cart</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Out Team</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color" routerLink="/about">About Us</p>
+    </div>
+
+  </button>
+  <button class="relative group">
+    <H1 class="tracking-widest text-xs font-medium text-black/80 hover:border-b-[0.5px] border-black h-[14px]">PAGES</H1>
+
+    <div class="group-hover:h-[250px] group-hover:pt-6 h-0 flex flex-col bg-white w-60 overflow-hidden absolute top-4 -left-[100px] duration-500">
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Checkout</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color" routerLink="/profile">Profile</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color" routerLink="/order-tracker">Order Tracking</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Wishlist</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">FAQs</p>
+    </div>
+
+  </button>
+  <button class="group">
+    <H1 class="tracking-widest text-xs font-medium text-black/80 hover:border-b-[0.5px] border-black h-[14px]">SHOP</H1>
+
+    <div class="group-hover:h-[430px] h-0 flex bg-white w-full absolute top-36 left-0 overflow-hidden duration-500 ">
+      <div class="w-[30%] flex flex-col justify-around py-12">
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Chair</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Sofa</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Table</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cabinet</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Tv Stand</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Bed</p>
+      <p class="p-2 pl-3 tracking-wide text-h1-text-color">Decorators</p>
+      </div>
+      <div class=" w-[70%] flex justify-start items-center gap-12 px-12 ">
+
+<div class="h-80 w-72 ">
+  <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt120.jpg" alt="">
+</div>
+<div class="h-80 w-72 ">
+  <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt120.jpg" alt="">
+</div>
+<div class="h-80 w-72 ">
+  <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt120.jpg" alt="">
+</div>
+<div class="h-80 w-72 ">
+  <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt120.jpg" alt="">
+</div>
+
+      </div>
+    </div>
+
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-medium text-black/80 hover:border-b-[0.5px] border-black h-[14px]">STORE</H1>
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-medium text-black/80 hover:border-b-[0.5px] border-black h-[14px]" routerLink="/about">ABOUT US</H1>
+  </button>
+ </div>
+
+<section [class.cart]="cartshow" [class.cartbk]="!cartshow" class="h-screen w-0 overflow-hidden flex justify-between absolute top-0 right-0 duration-500 bg-black/30 ">
+  <div (click)="cartbk()" class="h-full w-[10%] md:w-[40%] lg:w-full relative ">
+  </div>
+<div class="h-full w-[90%] md:w-[60%] lg:w-[440px] p-2 md:p-4 bg-white relative">
+<div class="h-[85%] w-full py-4 border-b-[1.5px] border-h1-text-color overflow-y-scroll ">
+<div class="flex flex-col gap-2">
+
+  <div class="h-32 w-full flex ">
+    <div class="h-full w-[35%] bg-pic-background-color">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt143.jpg" alt="">
+    </div>
+    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
+      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
+      <p class="text-lg text-h1-text-color">Quantity: 1</p>
+      <p class="text-lg ">$46.00</p>
+    </div>
+    <button class="flex items-start p-1">
+      <span class="material-symbols-outlined text-base">
+        close
+        </span>
+    </button>
+  </div>
+
+  <div class="h-32 w-full flex ">
+    <div class="h-full w-[35%] bg-pic-background-color">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt162.jpg" alt="">
+    </div>
+    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
+      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
+      <p class="text-lg text-h1-text-color">Quantity: 1</p>
+      <p class="text-lg ">$46.00</p>
+    </div>
+    <button class="flex items-start p-1">
+      <span class="material-symbols-outlined text-base">
+        close
+        </span>
+    </button>
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="flex justify-between items-center w-full p-3 ">
+  <h1 class="text-xl font-semibold tracking-wider ">TOTAL:</h1>
+  <p class="text-lg text-h1-text-color -mt-1 ">$40.00</p>
+</div>
+
+<div class="flex justify-between items-center gap-3 md:gap-5  w-full p-1 px-3 md:px-4 ">
+  <button class="py-2 w-full bg-black">
+    <p class="text-white tracking-wider text-lg">View Cart</p>
+  </button>
+  <button class="py-2 w-full border-black/60 border-[0.1px]">
+    <p class=" text-lg tracking-wider">Checkout</p>
+  </button>
+</div>
+
+</div>
+</section>
+
+  </header>

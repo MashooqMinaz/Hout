@@ -1,0 +1,57 @@
+h1{
+  font-family: 'Figtree', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  font-family: 'EB Garamond', serif;
+}
+
+h2{
+  font-family: 'Licorice', cursive;
+}
+
+span{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+
+input{
+  font-family: 'Figtree', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.home{
+  padding-top: 36px;
+  padding-bottom: 50px;
+  animation: home 0.5s linear ;
+}
+.homebk{
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  animation: homebk 0.5s linear ;
+}
+
+.homemenu{
+  height: 190px;
+}
+.homemenubk{
+  height: 0px;
+}
+
+.homemenu2{
+  height: 280px;
+  }
+  .homemenubk2{
+    height: 0px;
+  }
+
+.cart{
+  width: 100%;
+}
+.cartbk{
+  width: 0px;
+}
